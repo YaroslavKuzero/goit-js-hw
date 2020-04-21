@@ -1,6 +1,7 @@
 let input;
 const numbers = [];
 let inputNumber;
+let number;
 let total = 0;
 
 while (input !== null) {
@@ -10,15 +11,15 @@ while (input !== null) {
     alert(`${input} is not a number. Pls try again.`);
   } else if (input === null) {
     alert(
-      `You have inputed ${numbers} I will count sum for you`,
+      `You have inputed ${numbers} I am counting sum for you`,
     );
   } else {
     numbers.push(inputNumber);
   }
 }
-
-for (let i = 0; i < numbers.length; i += 1) {
-  total += Number(numbers[i]);
+// eslint-disable-next-line
+for (number of numbers) {
+  total += Number(number);
 }
 
 console.log(`The sum of inputed numbers is ${total}`);
