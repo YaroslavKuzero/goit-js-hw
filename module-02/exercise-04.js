@@ -1,7 +1,7 @@
 const formatString = function (string) {
   let newString = string;
 
-  if (string.length >= 40) {
+  if (string.length > 40) {
     const massOfSymbols = string.split('').slice(0, 40);
     massOfSymbols.push('...');
     newString = massOfSymbols.join('');
