@@ -20,12 +20,13 @@ const account = {
       amount,
       type,
     };
-    this.transactions.push(newTransaction);
     return newTransaction;
   },
 
   deposit(amount) {
-    this.createTransaction(amount, Transaction.DEPOSIT);
+    this.transactions.push(
+      this.createTransaction(amount, Transaction.DEPOSIT),
+    );
     this.balance += amount;
     return `Transaction completed successfully! On your deposit account is ${this.balance} credits`;
   },
@@ -34,7 +35,9 @@ const account = {
     if (amount > this.balance) {
       return 'Withdrawal cancelled. Not enough funds in the deposit account.';
     }
-    this.createTransaction(amount, Transaction.WITHDRAW);
+    this.transactions.push(
+      this.createTransaction(amount, Transaction.WITHDRAW),
+    );
     this.balance -= amount;
     return `Transaction completed successfully! On your  deposit account is ${this.balance} credits`;
   },
@@ -54,17 +57,12 @@ const account = {
   },
 
   getTransactionTotal(type) {
-    const arrTotal = [];
     let total = 0;
     // eslint-disable-next-line
     for (const objects of this.transactions) {
       if (objects.type === type) {
-        arrTotal.push(objects);
+        total += objects.amount;
       }
-    }
-    // eslint-disable-next-line
-    for (const objType of arrTotal) {
-      total += objType.amount;
     }
 
     return `Sum of ${type} operations is ${total}`;

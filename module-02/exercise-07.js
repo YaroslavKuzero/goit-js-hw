@@ -23,10 +23,10 @@ const addLogin = function (allLogins, login) {
   const validation = isLoginValid(login);
   const unique = isLoginUnique(allLogins, login);
   let message;
-  if (validation === false) {
+  if (!validation) {
     message =
       'Ошибка! Логин должен быть от 4 до 16 символов';
-  } else if (unique === false) {
+  } else if (!unique) {
     message = 'Такой логин уже используется!';
   } else {
     logins.push(login);

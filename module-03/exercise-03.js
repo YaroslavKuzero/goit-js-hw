@@ -1,19 +1,38 @@
-const findBestEmployee = function (employees) {
-  const arrOftasks = Object.values(employees);
+// FIRST VARIANT
 
-  let greatNum = arrOftasks[0];
-  // eslint-disable-next-line
-  for (const tasks of arrOftasks) {
-    if (greatNum < tasks) {
-      greatNum = tasks;
-    }
-  }
+// const findBestEmployee = function (employees) {
+//   const arrOftasks = Object.values(employees);
 
-  let bestEmployee;
+//   let greatNum = arrOftasks[0];
+//   // eslint-disable-next-line
+//   for (const tasks of arrOftasks) {
+//     if (greatNum < tasks) {
+//       greatNum = tasks;
+//     }
+//   }
+
+//   let bestEmployee;
+//   // eslint-disable-next-line
+//   for (const employee in employees) {
+//     if (employees[employee] === greatNum) {
+//       bestEmployee = employee;
+//     }
+//   }
+//   return bestEmployee;
+// };
+
+// SECOND VARIANT
+const findBestEmployee = employees => {
+  const arrOfKaV = Object.entries(employees);
+  let bestEmployee = arrOfKaV[0][0];
+  let greatNum = arrOfKaV[0][1];
   // eslint-disable-next-line
-  for (const employee in employees) {
-    if (employees[employee] === greatNum) {
-      bestEmployee = employee;
+  for (const employee of arrOfKaV) {
+    if (employee[1] > greatNum) {
+      const name = employee[0];
+      const NumOftasks = employee[1];
+      greatNum = NumOftasks;
+      bestEmployee = name;
     }
   }
   return bestEmployee;
@@ -44,3 +63,4 @@ console.log(
     chelsy: 38,
   }),
 ); // lux
+// 3 - попробуй сделать через 1 for при помощи Object.entries

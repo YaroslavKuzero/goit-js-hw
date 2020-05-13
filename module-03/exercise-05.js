@@ -13,7 +13,7 @@ const getAllPropValues = function (arr, prop) {
   const arrProp = [];
   // eslint-disable-next-line
   for (const object of arr) {
-    if (object[prop] !== undefined) {
+    if (object[prop]) {
       arrProp.push(object[prop]);
     }
   }
