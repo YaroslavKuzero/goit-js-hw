@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import items from './src/gallery-items.js';
+import items from './gallery-items.js';
 
 const galleryListRef = document.querySelector(
   '.js-gallery',
