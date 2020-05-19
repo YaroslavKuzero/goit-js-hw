@@ -45,7 +45,7 @@ class Car {
   }
 
   accelerate(value) {
-    if (value + this.speed < this.maxSpeed) {
+    if (value + this.speed <= this.maxSpeed) {
       this.speed += value;
     }
 
@@ -61,7 +61,7 @@ class Car {
   }
 
   drive(hours) {
-    if (this.isOn === true) {
+    if (this.isOn) {
       this.distance += hours * this.speed;
     }
 

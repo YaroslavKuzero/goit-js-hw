@@ -46,6 +46,4 @@ createButRef.addEventListener('click', () =>
   createBoxes(Number(inputRef.value)),
 );
 
-destroyButRef.addEventListener('click', () =>
-  destroyBoxes(),
-);
+destroyButRef.addEventListener('click', destroyBoxes);
