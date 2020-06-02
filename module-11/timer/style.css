@@ -1,0 +1,24 @@
+.timer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 404px;
+}
+.field {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+span {
+  display: block;
+  color: white;
+  height: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 28px;
+}
+
+.value {
+  font-size: 50px;
+}
