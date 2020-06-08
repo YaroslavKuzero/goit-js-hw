@@ -1,0 +1,20 @@
+.country_card {
+  color: #250e03;
+  font-size: 30px;
+  width: 70%;
+  margin: 0 auto;
+
+  .official_info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .official_name {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .flag {
+    width: 50%;
+  }
+}

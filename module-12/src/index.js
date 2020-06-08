@@ -9,8 +9,7 @@ const debouncedFetch = debounce(fetchCountries, 500);
 
 inputRef.addEventListener('input', event => {
   if (event.target.value === '') {
-    console.log('pls input name of country');
-    const listRef = document.querySelector('.country-list');
+    const listRef = document.querySelector('.country_card');
     listRef.textContent = '';
     return;
   }
@@ -18,6 +17,4 @@ inputRef.addEventListener('input', event => {
 });
 
 //todo:
-// - finish with css on list and country card
-// - to clear DOM before showing results
 // - minimize time of pnotify
