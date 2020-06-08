@@ -1,7 +1,7 @@
 import '../scss/searchbox.scss';
 
 const searchField = document.querySelector('.search');
-const searchInput = document.querySelector("input[type='text']");
+const searchInput = document.querySelector(".input-search");
 
 const checkSearch = function () {
   const contents = searchInput.value;
