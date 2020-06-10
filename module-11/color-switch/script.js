@@ -22,7 +22,7 @@ const randomIntegerFromInterval = (min, max) => {
 };
 
 const intervalSwitchColor = function () {
-  if (isActive === true) {
+  if (isActive) {
     return;
   }
 

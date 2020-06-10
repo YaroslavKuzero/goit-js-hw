@@ -15,6 +15,3 @@ inputRef.addEventListener('input', event => {
   }
   debouncedFetch(event.target.value);
 });
-
-//todo:
-// - minimize time of pnotify
