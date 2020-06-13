@@ -1,4 +1,6 @@
-const inputRef = document.querySelector('#validation-input');
+const inputRef = document.querySelector(
+  '#validation-input',
+);
 const dataLength = inputRef.getAttribute('data-length');
 
 inputRef.addEventListener('change', event => {
