@@ -1,3 +1,5 @@
+@import "./goToTop";
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -51,40 +53,14 @@
   text-align: center;
   transition: all 200ms linear;
   outline-color: lightskyblue;
+  position: relative;
 
   &:hover {
     background: rgba(235, 188, 203, 0.5);
     color: lightskyblue;
   }
-  &:active {
-    transform: translateY(1px);
-  }
+}
 
-  @keyframes loader {
-    0% {
-      transform: rotateZ(0);
-    }
-    100% {
-      transform: rotateZ(360deg);
-    }
-  }
-}
-.active {
-  font-size: 0;
-  border-radius: 25px;
-  width: 50px;
-  background: transparent;
-}
-.loader {
-  border-right: 2px solid #ffffff;
-  animation: loader 0.4s linear infinite;
-}
-.success {
-  background: #3bb873;
-  border-color: #3bb873;
-  font-size: 14px;
-  color: #ffffff;
-}
 .is-hidden {
   opacity: 0;
 }

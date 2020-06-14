@@ -1,0 +1,17 @@
+import markUpFunc from './updateMarkUp';
+import { loader, loaded } from './spinner';
+import photoService from './apiService';
+
+const contLoad = function () {
+  loader();
+  photoService.fetchPhotos().then(data => {
+    markUpFunc(data);
+    loaded();
+  });
+  window.scrollTo({
+    top: document.documentElement.offsetHeight,
+    behavior: 'smooth',
+  });
+};
+
+export default contLoad;

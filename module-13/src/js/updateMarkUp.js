@@ -1,3 +1,4 @@
+import '../scss/gallery.scss';
 import photoCard from '../templates/photo-card.hbs';
 import ref from './refs';
 
