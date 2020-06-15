@@ -20,7 +20,6 @@ refs.keyWord.addEventListener('submit', event => {
 refs.loadMore.addEventListener('click', contLoad);
 
 refs.list.addEventListener('click', event => {
-  console.dir(event.target.dataset.source);
   basicLightbox.create(`<img src="${event.target.dataset.source}"/>`).show();
 });
 

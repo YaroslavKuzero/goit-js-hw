@@ -7,10 +7,10 @@ const contLoad = function () {
   photoService.fetchPhotos().then(data => {
     markUpFunc(data);
     loaded();
-  });
-  window.scrollTo({
-    top: document.documentElement.offsetHeight,
-    behavior: 'smooth',
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: 'smooth',
+    });
   });
 };
 
