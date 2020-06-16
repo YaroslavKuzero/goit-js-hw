@@ -8,7 +8,7 @@ const contLoad = function () {
     markUpFunc(data);
     loaded();
     window.scrollBy({
-      top: window.innerHeight,
+      top: document.documentElement.offsetHeight,
       behavior: 'smooth',
     });
   });

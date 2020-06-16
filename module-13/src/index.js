@@ -1,6 +1,6 @@
 import './styles.css';
 import './scss/search-form.scss';
-import 'basiclightbox/src/styles/main.scss';
+import 'basiclightbox/dist/basicLightbox.min.css';
 import * as basicLightbox from 'basiclightbox';
 import photoService from './js/apiService';
 import refs from './js/refs';
@@ -20,6 +20,7 @@ refs.keyWord.addEventListener('submit', event => {
 refs.loadMore.addEventListener('click', contLoad);
 
 refs.list.addEventListener('click', event => {
+  event.preventDefault();
   basicLightbox.create(`<img src="${event.target.dataset.source}"/>`).show();
 });
 
